@@ -16,19 +16,30 @@ const rule = require("../../../lib/rules/function-count"),
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleTester = new RuleTester();
-ruleTester.run("function-limit", rule, {
+const ruleTester = new RuleTester({ 
+  parserOptions: { ecmaVersion: 2015 }
+ });
+ruleTester.run("function-count", rule, {
   valid: [
     // give me some code that won't trigger a warning
     {
-      code: 'var a = 1',
+      code: 'const a = 1',
+    },
+    {
+      code: 'function sum(){}'
     }
   ],
 
   invalid: [
     {
-      code: "//TODO",
-      errors: [{ messageId: 'withTODO' }],
+      code: `
+        function sum(){}
+        const pub = () => undefined
+        function add(){}
+        const a = function() {}
+        const sub = () => undefined
+      `,
+      errors: [{ messageId: 'withTODO' }, { messageId: 'withTODO' }, { messageId: 'withTODO' }],
     },
   ],
 });
