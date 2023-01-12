@@ -39,17 +39,17 @@ ruleTester.run("function-count", rule, {
         const a = function() {}
         const sub = () => undefined
       `,
-      errors: [{ messageId: 'withTODO' }, { messageId: 'withTODO' }],
+      errors: [{ messageId: 'tooManyFuncs' }, { messageId: 'tooManyFuncs' }],
     },
     {
       code: `
-        function sum(){}
         const pub = () => undefined
         function add(){}
         const a = function() {}
         const sub = () => undefined
+        function sum(){}
       `,
-      errors: [{ messageId: 'withTODO' }],
+      errors: [{ messageId: 'tooManyFuncs' }],
       options: [{
         limit: 4,
         files: [".*"]
