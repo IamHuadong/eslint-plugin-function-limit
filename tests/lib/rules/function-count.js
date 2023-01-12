@@ -39,7 +39,21 @@ ruleTester.run("function-count", rule, {
         const a = function() {}
         const sub = () => undefined
       `,
-      errors: [{ messageId: 'withTODO' }, { messageId: 'withTODO' }, { messageId: 'withTODO' }],
+      errors: [{ messageId: 'withTODO' }, { messageId: 'withTODO' }],
+    },
+    {
+      code: `
+        function sum(){}
+        const pub = () => undefined
+        function add(){}
+        const a = function() {}
+        const sub = () => undefined
+      `,
+      errors: [{ messageId: 'withTODO' }],
+      options: [{
+        limit: 4,
+        files: [".*"]
+      }]
     },
   ],
 });
