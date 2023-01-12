@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-function-limit",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Limit the functions count of one file",
   "keywords": [
     "eslint",
