@@ -1,5 +1,7 @@
 # eslint-plugin-function-limit
+
 Limit the functions count of specific files
+
 限制指定文件里函数的数量
 
 ## Background
