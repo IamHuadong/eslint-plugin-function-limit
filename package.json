@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-function-limit",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "Limit the functions count of one file",
   "keywords": [
     "eslint",
@@ -15,13 +15,14 @@
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
     "lint:js": "eslint .",
     "test": "mocha tests --recursive",
-    "update:eslint-docs": "eslint-doc-generator"
+    "update:eslint-docs": "eslint-doc-generator",
+    "updateVersion": "yarn bumpp"
   },
   "dependencies": {
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
-    "@jsdevtools/version-bump-prompt": "^6.1.0",
+    "bumpp": "^8.2.1",
     "eslint": "^8.19.0",
     "eslint-doc-generator": "^1.0.0",
     "eslint-plugin-eslint-plugin": "^5.0.0",
