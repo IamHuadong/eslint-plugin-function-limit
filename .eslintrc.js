@@ -16,4 +16,5 @@ module.exports = {
       env: { mocha: true },
     },
   ],
+  ignores: ["rollup.config.js"]
 };
