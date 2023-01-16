@@ -8,11 +8,11 @@
     "eslint-plugin"
   ],
   "author": "chd",
-  "main": "./dist/index.js",
-  "exports": "./dist/index.js",
+  "main": "./lib/index.js",
+  "exports": "./lib/index.js",
   "type": "commonjs",
   "files": [
-    "./dist"
+    "./lib"
   ],
   "scripts": {
     "lint": "npm-run-all \"lint:*\"",
@@ -20,8 +20,7 @@
     "lint:js": "eslint .",
     "test": "mocha tests --recursive",
     "update:eslint-docs": "eslint-doc-generator",
-    "updateVersion": "yarn bumpp",
-    "build": "rm -rf ./dist && cp -r ./lib ./dist && cp ./README.md ./dist"
+    "updateVersion": "yarn bumpp"
   },
   "dependencies": {
     "requireindex": "^1.2.0"
