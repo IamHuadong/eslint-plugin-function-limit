@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-function-limit",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Limit the functions count of one file",
   "keywords": [
     "eslint",
@@ -11,6 +11,9 @@
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
   "type": "commonjs",
+  "files": [
+    "./dist"
+  ],
   "scripts": {
     "lint": "npm-run-all \"lint:*\"",
     "lint:eslint-docs": "npm-run-all \"update:eslint-docs -- --check\"",
