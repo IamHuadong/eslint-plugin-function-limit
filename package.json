@@ -2,6 +2,7 @@
   "name": "eslint-plugin-function-limit",
   "version": "1.2.0",
   "description": "Limit the functions count of one file",
+  "homepage": "https://github.com/IamHuadong/eslint-plugin-function-limit",
   "keywords": [
     "eslint",
     "eslintplugin",
